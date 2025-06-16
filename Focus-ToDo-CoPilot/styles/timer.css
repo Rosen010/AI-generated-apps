@@ -1,0 +1,67 @@
+.timer-container {
+    max-width: 400px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.timer-display {
+    font-size: 72px;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 20px 0;
+    font-family: monospace;
+    transition: color 0.3s;
+}
+
+.timer-controls {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.control-button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.control-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.control-button:active {
+    transform: scale(0.95);
+}
+
+.session-info {
+    margin-top: 20px;
+    color: #666;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s;
+}
+
+/* Session type transitions */
+[data-session-type="focus"] .timer-display {
+    color: var(--primary-color);
+}
+
+[data-session-type="shortBreak"] .timer-display {
+    color: var(--secondary-color);
+}
+
+[data-session-type="longBreak"] .timer-display {
+    color: #2196F3;
+}

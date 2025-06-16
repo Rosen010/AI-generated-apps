@@ -1,0 +1,265 @@
+.tasks-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.add-task {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#task-input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#add-task-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.task-list {
+    background: white;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.reports-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.daily-summary,
+.weekly-report {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+}
+
+.task-form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+}
+
+#task-title {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.task-options {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.pomodoro-estimate,
+.priority-selector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#estimated-pomodoros {
+    width: 60px;
+    padding: 6px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+#task-priority {
+    padding: 6px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+.priority-p1 {
+    color: #ff4444;
+}
+
+.priority-p2 {
+    color: #ff8c00;
+}
+
+.priority-p3 {
+    color: #4CAF50;
+}
+
+.priority-p4 {
+    color: #808080;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid var(--border-color);
+    background: white;
+    animation: slideIn 0.3s ease-out;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.task-item.active {
+    background-color: #fff3f3;
+}
+
+.task-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+}
+
+.task-checkbox {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.2s;
+}
+
+.task-checkbox:checked {
+    transform: scale(1.1);
+}
+
+.task-details {
+    flex: 1;
+}
+
+.task-title.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.task-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.task-actions button {
+    padding: 5px 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+}
+
+.edit-task:hover {
+    background: #f0f0f0;
+}
+
+.delete-task:hover {
+    background: #ffebee;
+    color: #f44336;
+}
+
+.pomodoro-progress {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.pomodoro-circle {
+    width: 12px;
+    height: 12px;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.pomodoro-circle.completed {
+    background-color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+.start-task.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.chart {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 200px;
+    padding: 20px 0;
+}
+
+.chart-bar {
+    flex: 1;
+    text-align: center;
+    padding: 0 5px;
+}
+
+.chart-bar .bar {
+    background: var(--primary-color);
+    width: 100%;
+    min-height: 1px;
+    transition: height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.chart-bar .date {
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.report-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.stat-label {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.stat-value {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.weekly-stats {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
